@@ -129,9 +129,9 @@ console.log(initials);
 const dateStrings = ['2023-01-15', '2023-05-20', '2023-09-10'];
 const formattedDates = dateStrings.map((dateString) => {
  const date = new Date(dateString);
- return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+ return `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
 });
-console.log(formattedDates);
+console.log(formattedDates,'----formatted dates');
 // Output: ['1/15/2023', '5/20/2023', '9/10/2023']
 
 
@@ -194,9 +194,9 @@ function groupAnagramApproachTwo(anagrams) {
 }
 
 const input = ["eat", "tan", "tea", "ate", "nat", "bat"];
-console.log(groupAnagrams(input))
-console.log('*******--->', groupAnagram(input))
-console.log('*******------->',groupAnagramApproachTwo(input))
+console.log(groupAnagrams(input),'----another approach for anagram')
+console.log('*******--- 1st approach>', groupAnagram(input))
+console.log('*******-------2nd approach>',groupAnagramApproachTwo(input))
 
 function groupTogether(input){
   let final=[];
@@ -275,8 +275,6 @@ function duplicate(arr){
 }
 
 duplicate(array1);
-const arr = [1, 3, 5, 4, 6, 7, 4, 9, 8];
-
 
 function findMissingAndDuplicate(arr) {
   const n = arr.length; 
@@ -304,7 +302,7 @@ function findMissingAndDuplicate(arr) {
   console.log('Duplicate number:', duplicateNumber);
 }
 
-findMissingAndDuplicate(arr);
+findMissingAndDuplicate(array1);
 
 
 function findMajorityElement(m, nums) {
@@ -393,9 +391,9 @@ function toTitleCase(str) {
 
 console.log(toTitleCase('welcomehere'))
 
-const str ="abacdabcdabe";
+const strP ="abacdabcdabe";
 
-const countChar = (str) => {
+const countCharP = (str) => {
   const strArr = str.split('');
   const counter = strArr.reduce((acc, val)=>{
     if(acc[val]){
@@ -434,7 +432,7 @@ function charCounterAndJoin(str){
 
 // console.log(charCounterAndJoin(str));
 
-const charArr =['a','b','a','c','b','a','d'];
+const charArrL =['a','b','a','c','b','a','d'];
 
 function countCharNew(charArr){
   const counter = charArr.reduce((acc, val) =>{
@@ -477,8 +475,8 @@ function generalCharCounter(str){
   }
 }
 
-console.log(generalCharCounter(charArr),'-----charArr-----');
-console.log(generalCharCounter(str),'-----str-----');
+console.log(generalCharCounter(charArrL),'-----charArr-----');
+console.log(generalCharCounter(strP),'-----str-----');
 
 //There is an array of integers, lets say 3,5,7,9. 
 //You are supposed to create another array and populate it such that the second array's 0th position should be a

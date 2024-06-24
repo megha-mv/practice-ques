@@ -37,3 +37,49 @@ function add (num1) {
   console. log(result);
   console.log(res1()); // Output: 5
   console.log(res2()); // Output: 6
+
+ //
+ function sum(a) {
+  return function(b) {
+    return a + b;
+  };
+}
+console.log(sum(1)(2)); 
+console.log(sum(5)(-1)); 
+
+//
+
+function multiply(a) {
+  return function(b) {
+    return function(c) {
+      return a * b * c;
+    };
+  };
+}
+console.log(multiply(2)(3)(4)); // Output: 24
+console.log(multiply(1)(-1)(1));
+
+//
+function add(a) {
+  return function(b) {
+    if (b !== undefined) {
+      return add(a + b);
+    } else {
+      return a;
+    }
+  };
+}
+console.log(add(1)(2)(3)()); // Output: 6
+console.log(add(1)(1)(1)(1)(1)());
+//
+
+//Filter Array Using Currying
+function filterArray(predicate) {
+  return function(array) {
+    return array.filter(predicate);
+  };
+}
+function isEven(num) {
+  return num % 2 === 0;
+}
+console.log(filterArray(isEven)([1, 2, 3, 4]));

@@ -45,3 +45,43 @@ function firstMissingPositive(nums) {
 
 // Example usage
 console.log(firstMissingPositive(arr)); // Output: 2
+
+//
+function firstMissingPositiveBest(nums) {
+  const n = nums.length;
+  // Step 1: Replace negative numbers, zeros, and numbers larger than n with 1
+  for (let i = 0; i < n; i++) {
+    if (nums[i] <= 0 || nums[i] > n) {
+      nums[i] = 1;
+    }
+  }
+ 
+  // Step 2: Use index as a hash key and mark the corresponding positions negative
+  for (let i = 0; i < n; i++) {
+    const num = Math.abs(nums[i]);
+    if (num === n) {
+      nums[0] = -Math.abs(nums[0]); 
+    } else {
+      nums[num] = -Math.abs(nums[num]);
+    }
+  }
+
+  // Step 3: Find the first positive number
+  for (let i = 1; i < n; i++) {
+    if (nums[i] > 0) {
+      return i;
+    }
+  }
+
+  // Check if n is missing
+  if (nums[0] > 0) {
+    return n;
+  }
+
+  // If no number is missing within the range, the answer is n+1
+  return n + 1;
+}
+
+// Example usage
+const nums =[5,4,-1,1,0,2,6]
+console.log(firstMissingPositiveBest(nums)); 

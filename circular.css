@@ -1,0 +1,38 @@
+/* .parentContainer{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  width: 210px;
+  height: 210px;
+  background: #243D83;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerCircle{
+  width: 145px;
+  height: 145px;
+  background:white;
+  border-radius: 50%;
+} */
+
+&{
+  border:1.9rem solid;
+  border-top-color:#557DBC;
+  background:#6592CF;
+  color:#243D83;
+  margin:50 100
+ }
+*{
+  border-radius:50%;
+  rotate:45deg;
+*{
+  margin:55;
+  box-shadow:-85px 0,0-85px
+ }
+}

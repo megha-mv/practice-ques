@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="progress bar stylesheet" href="circular.css"> -->
+  <style>
+    @-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(90deg);}
+    }
+    
+    body {           
+      margin: 0;
+      padding: 0;
+    }
+    .outer{
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+   .parentContainer {
+      border:2rem solid;
+      border-top-color:#a4b6e4;      
+      color:#194ad2;
+      transform: rotate(45deg);
+      height: 100px;
+      width: 100px;
+      border-radius: 50%; 
+      position: relative;
+      -webkit-animation: rotation 2s infinite linear;
+   }
+
+   .circleOne{
+    height: 33px;
+    width: 32.5px;
+    background-color: #194ad2;
+    border-radius: 50%;
+    position: fixed;
+    top: 40.5%;
+    left: 49%;
+   }
+
+   .circleTwo{
+    height: 33px;
+    width: 33px;
+    background-color: #194ad2;
+    border-radius: 50%; 
+    position: fixed;
+    right: 43.88%;
+   }
+
+  </style>
+</head>
+<body>
+    <div class="outer">
+     <div class="parentContainer">
+     </div>
+     <!-- <div class="circleOne"></div> -->
+     <!-- <div class="circleTwo"></div> -->
+      <!-- <div class="box1">
+        <h1 class="heading"></h1>
+      </div> -->
+    </div>
+</body>
+</html> 

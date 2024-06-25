@@ -1,0 +1,44 @@
+.ParentContainer {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  background-color: chocolate;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-frame {
+  border: 30px solid transparent;
+  border-image: url('/Users/mvashishth/Desktop/NEWNEXTAPP/pexels-andrew-2312369.jpg') 30 30 round;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%; 
+  height: 50%; 
+}
+
+.photo-frame img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%; 
+  height: 10%; 
+}

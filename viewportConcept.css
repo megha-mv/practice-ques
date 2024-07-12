@@ -1,0 +1,37 @@
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap:8px;
+    text-align: center;
+}
+
+.first{
+    width:100%;
+    height: 50vh;
+    background-color: red;
+    border: 3px dotted black;
+    margin: auto;
+}
+.second{
+    width:100%;
+    height: 50svh;
+    background-color: yellow;
+    border: 3px dotted black;
+    margin: auto;
+}
+.third{
+    width:100%;
+    height: 50lvh;
+    background-color: blueviolet;
+    border: 3px dotted black;
+    margin: auto;
+}
+.fourth{
+    width:100%;
+    height: 50dvh;
+    background-color: green;
+    border: 3px dotted black;
+    margin: auto;
+}
